@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.entity.Address;
@@ -130,4 +132,10 @@ public class EmployeeController {
 	public ResponseEntity<Object> updateProduct() { 
 	   throw new ProductNotfoundException("No Product Available");
 	}
+	
+	@RequestMapping(value = "/fetchdepskk/{age}", method = RequestMethod.PUT)
+	   public List<Employees> fetchdep(@PathVariable("age") Integer age){
+		 System.out.println("-->>>>--"+age);
+		return employeeService.getDepartment(age);
+	   }
 }
