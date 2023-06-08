@@ -5,6 +5,14 @@ public class Product {
 	private Integer prodid;
 	private String prodname;
 	private Integer price;
+	
+	
+	public Product(Integer prodid, String prodname, Integer price) {
+		super();
+		this.prodid = prodid;
+		this.prodname = prodname;
+		this.price = price;
+	}
 	public Integer getProdid() {
 		return prodid;
 	}
