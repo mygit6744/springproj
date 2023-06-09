@@ -1,0 +1,8 @@
+node {
+  stage('SCM Checkout') {
+    git 'https://github.com/mygit6744/springproj'
+  }
+  stage('Compile-Package') {
+    git 'mvn package'
+  }
+}
