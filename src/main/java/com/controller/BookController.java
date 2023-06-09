@@ -86,7 +86,7 @@ public class BookController {
 			@PathVariable BigDecimal amount) {
 		String status = "";
 		try {
-			System.out.println("transfer money>>>>>");
+			System.out.println("transfering.. money>>>>>");
 			status = bookService.moneyTransfer(sender, receiver, amount);
 		} catch (Exception e) {
 			e.printStackTrace();
