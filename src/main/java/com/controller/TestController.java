@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
-
-	@Value("${welcome.message}")
-	private String welcomeMessage;
 	
 	@GetMapping("/api/foos")
 	@ResponseBody
@@ -63,12 +59,5 @@ public class TestController {
 	ResponseEntity<String> hellos() {
 	    return ResponseEntity.ok("Hello World!");
 	}
-	
-	
 
-	@GetMapping("/welcome")
-	public String retrieveWelcomeMessage() {
-		// Complex Method
-		return welcomeMessage;
-	}
 }
