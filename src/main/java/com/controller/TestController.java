@@ -59,5 +59,10 @@ public class TestController {
 	ResponseEntity<String> hellos() {
 	    return ResponseEntity.ok("Hello World!");
 	}
+	
+	@GetMapping("/testing")
+	ResponseEntity<String> testing() {
+	    return ResponseEntity.ok("Hello World testing!");
+	}
 
 }
