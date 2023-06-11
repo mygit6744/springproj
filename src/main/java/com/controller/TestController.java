@@ -64,5 +64,11 @@ public class TestController {
 	ResponseEntity<String> testing() {
 	    return ResponseEntity.ok("Hello World testing!");
 	}
+	
+	@GetMapping("/testJenkin")
+	ResponseEntity<String> testJenkin() {
+	    return ResponseEntity.ok("Hello World testing Jenkin!");
+	}
+
 
 }
